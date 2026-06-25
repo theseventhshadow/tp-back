@@ -37,3 +37,4 @@ API REST para la tienda de perritos, desplegada en AWS EKS con CI/CD automatizad
 ## Intentos de despliegue
 
 - 1
+- 2
