@@ -3,11 +3,12 @@ name: Deploy Backend to EKS
 on:
   push:
     branches: [ main ]
-    paths:
-      - 'src/**'
-      - 'db/**'
-      - 'Dockerfile'
-      - 'k8s/**'
+   # paths:
+    #  - 'src/**'
+     # - 'db/**'
+      
+      # - 'Dockerfile'
+      # - 'k8s/**'
 
 env:
   AWS_REGION: us-east-1
