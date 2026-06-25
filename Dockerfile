@@ -1,0 +1,27 @@
+# Usa Node.js 18 Alpine (más liviano)
+FROM node:18-alpine
+
+# Crear directorio de trabajo
+WORKDIR /app
+
+# Copiar package.json y package-lock.json (si existe)
+COPY src/package*.json ./
+
+# Instalar dependencias (solo producción)
+RUN npm ci --only=production
+
+# Copiar el código fuente
+COPY src/ .
+
+# Crear usuario no-root para seguridad
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001 && \
+    chown -R nodejs:nodejs /app
+
+USER nodejs
+
+# Exponer el puerto
+EXPOSE 3001
+
+# Comando para iniciar el servidor
+CMD ["node", "server.js"]
