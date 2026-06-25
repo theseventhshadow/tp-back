@@ -33,3 +33,7 @@ API REST para la tienda de perritos, desplegada en AWS EKS con CI/CD automatizad
 | `PORT` | Puerto del servidor | `3001` |
 
 ## Estructura del repositorio
+
+## Intentos de despliegue
+
+- 1
